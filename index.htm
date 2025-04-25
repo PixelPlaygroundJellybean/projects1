@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Riddle</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+      </head>
+      <body>
+        <h2>🧠 Guess the Word from These 3 Images</h2>
+        <div class="riddle-images">
+          <img src="images/img1.jpg" alt="Clue 1">
+          <img src="images/img2.jpg" alt="Clue 2">
+          <img src="images/img3.jpg" alt="Clue 3">
+        </div>
+        <div>
+        </div>
+      
+        <input type="text" id="answer" placeholder="Type your answer..." />
+        <br><br>
+        <button onclick="checkAnswer()">Submit</button>
+        <script>
+            function checkAnswer() {
+              const answer = document.getElementById("answer").value.toLowerCase().trim();
+              const correctAnswer = "connection"; // for example
+        
+              if (answer === correctAnswer) {
+                window.location.href = "next.html";
+              } else {
+                alert("Wrong answer bro! Try again 😅");
+              }
+            }
+          </script>
+        
+      </body>
+      </html>
+</html>
